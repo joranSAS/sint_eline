@@ -6,7 +6,7 @@ from langchain_core.prompts import ChatPromptTemplate, MessagesPlaceholder
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_openai import ChatOpenAI
 
-os.environ["OPENAI_API_KEY"] = "sk-proj-Q1ZGcLqVW0FoEx1z4PfsT3BlbkFJ5Ccn0VEGqljK3YSRcut9"
+os.environ["OPENAI_API_KEY"] = st.secrets['key']
 
 # Start a conversation 
 msgs = StreamlitChatMessageHistory()
