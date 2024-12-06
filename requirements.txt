@@ -26,5 +26,5 @@ promptwatch
 langchain_decorators
 langchain-openai
 docarray
-protobuf==3.19.0
+protobuf==4.25.3
 pysqlite3-binary
