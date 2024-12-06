@@ -56,7 +56,7 @@ chain_with_history = RunnableWithMessageHistory(
     history_messages_key="history",
 )
 
-st.image("G:/My Drive/Sinterklaas/Eline chatbot 2024/Eline.jpg", width=300)
+st.image("Eline.jpg", width=300)
 
 if len(msgs.messages) == 0:
     config = {"configurable": {"session_id": "any"}}
@@ -66,12 +66,12 @@ if len(msgs.messages) == 0:
 
 # Show conversation history
 for msg in msgs.messages:
-    st.chat_message(msg.type, avatar='G:/My Drive/Sinterklaas/Eline chatbot 2024/avatar_sint.jpg').write(msg.content)
+    st.chat_message(msg.type, avatar='avatar_sint.jpg').write(msg.content)
 
 if prompt := st.chat_input():
-    st.chat_message("human", avatar='G:/My Drive/Sinterklaas/Eline chatbot 2024/avatar_eline.jpg').write(prompt)
+    st.chat_message("human", avatar='avatar_eline.jpg').write(prompt)
 
     # As usual, new messages are added to StreamlitChatMessageHistory when the Chain is called.
     config = {"configurable": {"session_id": "any"}}
     response = chain_with_history.invoke({"question": prompt}, config)
-    st.chat_message("ai", avatar='G:/My Drive/Sinterklaas/Eline chatbot 2024/avatar_sint.jpg').write(response.content)
+    st.chat_message("ai", avatar='avatar_sint.jpg').write(response.content)
