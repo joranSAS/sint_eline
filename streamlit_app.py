@@ -68,7 +68,7 @@ if len(msgs.messages) == 0:
 for msg in msgs.messages:
     st.chat_message(msg.type, avatar='avatar_sint.jpg').write(msg.content)
 
-if prompt := st.chat_input():
+if prompt := st.chat_input('Geef het antwoord of stel een vraag aan Sinterklaas'):
     st.chat_message("human", avatar='avatar_eline.jpg').write(prompt)
 
     # As usual, new messages are added to StreamlitChatMessageHistory when the Chain is called.
